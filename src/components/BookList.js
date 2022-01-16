@@ -22,32 +22,42 @@ function BookList() {
   // ];
 
   const BASE_URL = "https://floran-book-api.herokuapp.com/";
+  const LATEST_URL = "https://floran-book-api.herokuapp.com/latest/";
 
   React.useEffect(() => {
     axios
       .get(BASE_URL)
       .then((response) => {
-        
         setBook_list(response.data.reverse());
-        setTrendingBook(response.data.shift());
+      })
+      .catch((err) => console.log(err));
+    axios
+      .get(LATEST_URL)
+      .then((response) => {
+        setTrendingBook(response.data.reverse());
       })
       .catch((err) => console.log(err));
   }, []);
-  
+
   if (book_list) {
     return (
-      
       <div className="container mx-auto mt-5">
         <h2 className="trending-title">Latest Book ...</h2>
-        <TrendingBook
-          bookid={trendingBook.id}
-          bookname={trendingBook.name}
-          bookauthor={trendingBook.author}
-          bookdescription={trendingBook.description}
-          bookprice={trendingBook.price}
-          bookpage={trendingBook.pages}
-          bookcover={trendingBook.cover}
-        />
+
+        {trendingBook.map((tbook, index) => {
+          return (
+            <TrendingBook
+              bookid={tbook.id}
+              bookname={tbook.name}
+              bookauthor={tbook.author}
+              bookdescription={tbook.description}
+              bookprice={tbook.price}
+              bookpage={tbook.pages}
+              bookcover={tbook.cover}
+            />
+          );
+        })}
+
         <h2 className="trending-title">Explore Other Collections ...</h2>
         <div className="row">
           {book_list.map((book, index) => {

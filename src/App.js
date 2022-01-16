@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+
 import './css/App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import BookCreate from './pages/BookCreate';
 import BookDetail from './pages/BookDetail';

@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-let context = {
-  logo: "../img/bookbinger-logo.png",
-};
+
 
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -73,7 +71,7 @@ l-100 -39 -101 39 c-209 81 -393 119 -621 128 l-153 6 0 599 0 598 -30 0 c-17
               <h6 className="nav-item-content">About</h6>
         </Link>
         
-        <a href="#" className="icon" onClick={myFunction}>
+        <a href="/#" className="icon" onClick={myFunction}>
           <i className="fa fa-bars"></i>
         </a>
       </div>

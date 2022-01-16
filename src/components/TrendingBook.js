@@ -9,7 +9,7 @@ function TrendingBook(props) {
           <img
             className="trendignCardImg"
             src={props.bookcover}
-            alt="no photo found"
+            alt="bg"
           />
         </div>
         <div className="col-lg-8">

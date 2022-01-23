@@ -34,13 +34,8 @@ body::-webkit-scrollbar-thumb {
   background-color: orangered;
 }
 
-.book-details {
-  height: 70%;
-  width: 70%;
-}
-
 .book-details-img {
-  width: 70%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -146,8 +141,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   margin-bottom: 15px;
 }
+.book-publish {
+  padding: 3px;
+  background-color: coral;
+}
 
 .card {
+  padding: 7px;
   margin: 13px;
   border-radius: 8px;
   background-color: coral;
@@ -160,7 +160,27 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid black;
   transition: 200ms ease-in;
 }
-
+.card-about {
+  background-color: blanchedalmond;
+  padding: 7px;
+  margin: 15px;
+  border-radius: 10px;
+}
+.card-create {
+  padding: 15px;
+  margin: 20px;
+  border-radius: 8px;
+  background-color: lightskyblue;
+  border: 3px solid black;
+}
+.invalid-feedback {
+  color: black;
+}
+.form-label {
+  color: black;
+  font-size: larger;
+  font-weight: bolder;
+}
 .book-description {
   background-color: rgb(255, 226, 220);
   padding: 5px;

@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function TrendingBook(props) {
   return (
-    <a className="col-lg-6" href={"/details/" + props.bookid}>
-      <div>
+    <div className="col-lg-6">
+    <Link to={"/details/" + props.bookid}>
+      
         <div className="trending-book">
           <div className="row">
             <div className="col-lg-4">
@@ -33,8 +35,8 @@ function TrendingBook(props) {
             </div>
           </div>
         </div>
-      </div>
-    </a>
+      
+    </Link></div>
   );
 }
 

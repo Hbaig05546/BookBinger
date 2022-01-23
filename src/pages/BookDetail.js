@@ -1,70 +1,67 @@
 import React, { Component } from "react";
-
-import axios from 'axios'
-
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 export class BookDetail extends Component {
-
-  
   state = {
-    bookDetail : ""
-  }
+    bookDetail: "",
+  };
 
   componentDidMount() {
-    const { id } = this.props.match.params
+    const { id } = this.props.match.params;
     const BASE_URL = `https://floran-book-api.herokuapp.com/${id}`;
     const fetchBookDetail = () => {
-      axios.get(BASE_URL).then(
-        (response) => {
+      axios
+        .get(BASE_URL)
+        .then((response) => {
           this.setState({
-            bookDetail: response.data
-          })
-        }
-      ).catch(
-        err => console.log(err)
-      )
-    }
-    fetchBookDetail()
+            bookDetail: response.data,
+          });
+        })
+        .catch((err) => console.log(err));
+    };
+    fetchBookDetail();
   }
 
-  
-
-
   render() {
-    let bookDetail = this.state.bookDetail
-    if(!bookDetail){
-      console.log("######################sucess##########################")
+    let bookDetail = this.state.bookDetail;
+    if (!bookDetail) {
+      console.log("######################sucess##########################");
 
-      return <h1>Loading ....</h1>
-    }else{
+      return <h1>Loading ....</h1>;
+    } else {
       return (
-        
-        <div className="book-details">
-          <div className="jumbotron">
-          <img src={bookDetail.cover} className="book-details-img" alt="no img found"></img>
+        <div className="col-lg-8 col-md-8">
+          <div className="card">
+            <img
+              src={bookDetail.cover}
+              className="book-details-img"
+              alt="no img found"
+            ></img>
             <div className="card-body">
               <h5 className="card-title">{bookDetail.name}</h5>
-              <div className="description"><h5>Book Description :</h5>
-              <p className="card-text">description loren ipsum doleer</p></div>
+              <div className="description">
+                <h5>Book Description :</h5>
+                <p className="card-text">description loren ipsum doleer</p>
+              </div>
             </div>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">Author: {bookDetail.author}</li>
-              <li className="list-group-item">Price: &#8377; {bookDetail.price}</li>
+              <li className="list-group-item">
+                Price: &#8377; {bookDetail.price}
+              </li>
               <li className="list-group-item">Pages: {bookDetail.pages}</li>
               <li className="list-group-item">Book ID: {bookDetail.id}</li>
             </ul>
             <div className="card-body">
-              <a href="/" className="card-link">
+              <Link to={"/"} className="card-link">
                 Back To Home
-              </a>
+              </Link>
             </div>
           </div>
-            
-          </div>
-        
+        </div>
       );
-      }
-     
+    }
   }
 }
 

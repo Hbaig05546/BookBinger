@@ -43,20 +43,21 @@ function BookList() {
     return (
       <div className="container mx-auto mt-5">
         <h2 className="trending-title">Latest Book ...</h2>
-
-        {trendingBook.map((tbook, index) => {
-          return (
-            <TrendingBook
-              bookid={tbook.id}
-              bookname={tbook.name}
-              bookauthor={tbook.author}
-              bookdescription={tbook.description}
-              bookprice={tbook.price}
-              bookpage={tbook.pages}
-              bookcover={tbook.cover}
-            />
-          );
-        })}
+        <div className="row">
+          {trendingBook.map((tbook, index) => {
+            return (
+              <TrendingBook
+                bookid={tbook.id}
+                bookname={tbook.name}
+                bookauthor={tbook.author}
+                bookdescription={tbook.description}
+                bookprice={tbook.price}
+                bookpage={tbook.pages}
+                bookcover={tbook.cover}
+              />
+            );
+          })}
+        </div>
 
         <h2 className="trending-title">Explore Other Collections ...</h2>
         <div className="row">

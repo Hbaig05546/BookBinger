@@ -2,7 +2,8 @@ import React from "react";
 
 function TrendingBook(props) {
   return (
-    <a href={'/details/'+props.bookid}>
+    <div className="col-lg-6">
+<a href={'/details/'+props.bookid}>
     <div className="trending-book">
       <div className="row">
         <div className="col-lg-4">
@@ -34,6 +35,7 @@ function TrendingBook(props) {
     </div>
 
     </a>
+    </div>
   );
 }
 

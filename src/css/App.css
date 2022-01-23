@@ -99,29 +99,24 @@ body::-webkit-scrollbar-thumb {
   border: black solid 3px;
   border-radius: 8px;
   margin-bottom: 30px;
-  max-height: 40%;
-  width: 60%;
+
   padding: 15px;
   background-color: coral;
   margin-left: 10px;
-  
 }
-.trending-book:hover{
+.trending-book:hover {
   border: black solid 3px;
   border-radius: 8px;
   margin-bottom: 30px;
-  max-height: 40%;
-  width: 60%;
+
   padding: 15px;
   background-color: orangered;
-  transition:200ms ease-in;
+  transition: 200ms ease-in;
   margin-left: 10px;
-  
 }
-.trending-title{
+.trending-title {
   color: azure;
   margin: 10px;
-  
 }
 .trendignCardImg {
   border: solid black 2px;
@@ -129,7 +124,6 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: auto;
 }
-
 
 .book-title {
   font-weight: 700;
@@ -154,14 +148,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card {
-  width: 23%;
   margin: 13px;
   border-radius: 8px;
   background-color: coral;
   border: 3px solid black;
 }
 .card:hover {
-  width: 23%;
   margin: 13px;
   border-radius: 8px;
   background-color: orangered;
@@ -175,16 +167,16 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   border: black solid 2px;
   font-size: small;
-  
+
   color: black;
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
   height: 150px;
   display: -webkit-box;
-   -webkit-line-clamp: 5; /* number of lines to show */
-           line-clamp: 5; 
-   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .card-img-top {
